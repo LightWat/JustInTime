@@ -11,16 +11,16 @@ export default function RemindTimeList({user, courseId}) {
 
   const range = [0, 5, 10, 15, 20];
 
-  const submit = e => {
+  const change = e => {
     setSelectedTime(e.target.value);
   }
 
   useEffect(() => {
     updateRemindTime(user.id, courseId, selectedTime);
-  }, [selectedTime]);
+  }, [user.id, courseId, selectedTime, updateRemindTime]);
 
   return (
-    <select defaultValue={range[0]} onChange={submit}>
+    <select defaultValue={range[0]} onChange={change}>
       {range.map((elm, i) => (
         <option value={elm}>{elm}</option>
       ))}
