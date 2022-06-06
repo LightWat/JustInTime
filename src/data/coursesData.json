@@ -1,0 +1,16 @@
+[
+  {
+    "id": "001",
+    "name": "Web程式設計",
+    "teacher": "盧建成",
+    "time": "MON 13:00 ~ 16:00",
+    "link": "https://app.gather.town/invite?token=irA0_LglmrN3zcOlMVbfRxBYt3MoWuL6"
+  },
+  {
+    "id": "002",
+    "name": "演算法",
+    "teacher": "沈錳坤",
+    "time": "FRI 09:00 ~ 12:00",
+    "link": "https://meet.google.com/gdc-frjp-ogx"
+  }
+]

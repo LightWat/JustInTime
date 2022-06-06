@@ -1,0 +1,24 @@
+[
+  {
+    "id": "111001001",
+    "name": "Dennis",
+    "course": [
+      {
+        "id": "001",
+        "name": "Web程式設計",
+        "open": true,
+        "showTeacher": true,
+        "showTime": true,
+        "remind": 5
+      },
+      {
+        "id": "002",
+        "name": "演算法",
+        "open": true,
+        "showTeacher": true,
+        "showTime": false,
+        "remind": 10
+      }
+    ]
+  }
+]

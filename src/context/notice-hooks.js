@@ -1,34 +1,7 @@
 import React, {createContext, useContext, useState} from "react";
 
+import usersData from "../data/usersData.json";
 
-const usersData = [
-  {
-    id: "111001001",
-    name: "Dennis",
-    course: [
-      {
-        id: "001",
-        name: "Web程式設計",
-        notice: {
-          isOpen: true,
-          teacher: true,
-          time: true,
-          remind: 0,
-        }
-      },
-      {
-        id: "002",
-        name: "演算法",
-        notice: {
-          isOpen: true,
-          teacher: false,
-          time: true,
-          remind: 10,
-        }
-      }
-    ]
-  }
-]
 
 const NoticeContext = createContext();
 
@@ -42,10 +15,10 @@ export function NoticeProvider({children}) {
       if (user.id === userId) {
         for (let i = 0; i < user.course.length; ++i) {
           if (user.course[i].id === courseId) {
-            if (user.course[i].notice.teacher) {
-              user.course[i].notice.teacher = false;
+            if (user.course[i].showTeacher) {
+              user.course[i].showTeacher = false;
             } else {
-              user.course[i].notice.teacher = true;
+              user.course[i].showTeacher = true;
             }
           }
         }
@@ -62,10 +35,10 @@ export function NoticeProvider({children}) {
       if (user.id === userId) {
         for (let i = 0; i < user.course.length; ++i) {
           if (user.course[i].id === courseId) {
-            if (user.course[i].notice.time) {
-              user.course[i].notice.time = false;
+            if (user.course[i].showTime) {
+              user.course[i].showTime = false;
             } else {
-              user.course[i].notice.time = true;
+              user.course[i].showTime = true;
             }
           }
         }
@@ -82,10 +55,10 @@ export function NoticeProvider({children}) {
       if (user.id === userId) {
         for (let i = 0; i < user.course.length; ++i) {
           if (user.course[i].id === courseId) {
-            if (user.course[i].notice.isOpen) {
-              user.course[i].notice.isOpen = false;
+            if (user.course[i].open) {
+              user.course[i].open = false;
             } else {
-              user.course[i].notice.isOpen = true;
+              user.course[i].open = true;
             }
           }
         }
@@ -102,7 +75,7 @@ export function NoticeProvider({children}) {
       if (user.id === userId) {
         for (let i = 0; i < user.course.length; ++i) {
           if (user.course[i].id === courseId) {
-            user.course[i].notice.remind = selectedTime;
+            user.course[i].remind = selectedTime;
           }
         }
       }

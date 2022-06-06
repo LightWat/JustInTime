@@ -35,12 +35,12 @@ export default function AdjustmentList({userId}) {
       <br />
 
       <Teacher 
-        selected={course.notice.teacher}
+        selected={course.showTeacher}
         onClick={() => updateNoticeTeacher(userId, selected)} 
       />
 
       <Time
-        selected={course.notice.time}
+        selected={course.showTime}
         onClick={() => updateNoticeTime(userId, selected)}
       />
 
@@ -49,7 +49,7 @@ export default function AdjustmentList({userId}) {
       <Open
         user={user}
         courseId={selected} 
-        selected={course.notice.isOpen}
+        selected={course.open}
         onClick={() => updateNoticeOpen(userId, selected)}
       />
 

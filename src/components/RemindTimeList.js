@@ -6,7 +6,7 @@ import {useNotices} from "../context/notice-hooks";
 export default function RemindTimeList({user, courseId}) {
   const {updateRemindTime} = useNotices();
   const [selectedTime, setSelectedTime] = useState(
-    user.course.find(course => course.id === courseId).notice.remind
+    user.course.find(course => course.id === courseId).remind
   );
 
   const range = [0, 5, 10, 15, 20];
