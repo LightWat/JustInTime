@@ -5,27 +5,29 @@ import Teacher from "./Teacher";
 import Time from "./Time";
 import Open from "./Open";
 import Status from "./Status";
+import RemindTimeList from "./RemindTimeList";
 
 
-export default function AdjustmentList({userId}) {
+export default function SelectCourse({userId}) {
   const {
     users,
     updateNoticeTeacher,
     updateNoticeTime,
-    updateNoticeOpen
+    updateNoticeOpen,
   } = useNotices();
-  const [selected, setSelected] = useState("001");
 
+  const [selected, setSelected] = useState("001");
+  
   const user = users.find(user => user.id === userId);
   const course = user.course.find(course => course.id === selected);
 
-  const submit = e => {
-    setSelected(e.target.value);
-  }
+  const [selectedTime, setSelectedTime] = useState(course.remind); 
 
   return (
     <>
-      <select defaultValue={selected} onChange={submit}>
+      <select defaultValue={selected} onChange={event => 
+        setSelected(event.target.value)
+      }>
         {user.course.map((course, i) => (
           <option value={course.id}>{course.name}</option>
         ))}
@@ -52,9 +54,15 @@ export default function AdjustmentList({userId}) {
         selected={course.open}
         onClick={() => updateNoticeOpen(userId, selected)}
       />
-
+      {course.open ? 
+        <RemindTimeList 
+          user={user} 
+          courseId={course.id}
+          changeSelect={setSelectedTime}
+        /> : 
+        null
+      }
       <hr />
-
       <Status course={course} />
     </>
   );

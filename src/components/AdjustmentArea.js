@@ -1,6 +1,6 @@
 import React from "react";
 
-import AdjustmentList from "./AdjustmentList";
+import SelectCourse from "./SelectCourse";
 
 
 export default function AdjustmentArea({userId}) {
@@ -8,7 +8,7 @@ export default function AdjustmentArea({userId}) {
     <div>
       <h3>課程提醒內容調整區</h3>
       <hr />
-      <AdjustmentList userId={userId} />
+      <SelectCourse userId={userId} />
     </div>
   )
 }

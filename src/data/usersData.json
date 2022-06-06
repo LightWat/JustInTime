@@ -4,6 +4,14 @@
     "name": "Dennis",
     "course": [
       {
+        "id": "all",
+        "name": "所有課程",
+        "open": true,
+        "showTeacher": true,
+        "showTime": true,
+        "remind": 0
+      },
+      {
         "id": "001",
         "name": "Web程式設計",
         "open": true,

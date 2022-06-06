@@ -13,13 +13,12 @@ export function NoticeProvider({children}) {
 
     for (let user of updatedUsers) {
       if (user.id === userId) {
+        let status = !user.course[0].showTeacher;
         for (let i = 0; i < user.course.length; ++i) {
-          if (user.course[i].id === courseId) {
-            if (user.course[i].showTeacher) {
-              user.course[i].showTeacher = false;
-            } else {
-              user.course[i].showTeacher = true;
-            }
+          if (courseId === "all") {
+            user.course[i].showTeacher = status;
+          } else if (user.course[i].id === courseId) {
+            user.course[i].showTeacher = !user.course[i].showTeacher;
           }
         }
       }
@@ -33,13 +32,12 @@ export function NoticeProvider({children}) {
 
     for (let user of updatedUsers) {
       if (user.id === userId) {
+        let status = !user.course[0].showTime;
         for (let i = 0; i < user.course.length; ++i) {
-          if (user.course[i].id === courseId) {
-            if (user.course[i].showTime) {
-              user.course[i].showTime = false;
-            } else {
-              user.course[i].showTime = true;
-            }
+          if (courseId === "all") {
+            user.course[i].showTime = status;
+          } else if (user.course[i].id === courseId) {
+            user.course[i].showTime = !user.course[i].showTime;
           }
         }
       }
@@ -53,13 +51,12 @@ export function NoticeProvider({children}) {
 
     for (let user of updatedUsers) {
       if (user.id === userId) {
+        let status = !user.course[0].open;
         for (let i = 0; i < user.course.length; ++i) {
-          if (user.course[i].id === courseId) {
-            if (user.course[i].open) {
-              user.course[i].open = false;
-            } else {
-              user.course[i].open = true;
-            }
+          if (courseId === "all") {
+            user.course[i].open = status;
+          } else if (user.course[i].id === courseId) {
+            user.course[i].open = !user.course[i].open;
           }
         }
       }
@@ -74,7 +71,9 @@ export function NoticeProvider({children}) {
     for (let user of updatedUsers) {
       if (user.id === userId) {
         for (let i = 0; i < user.course.length; ++i) {
-          if (user.course[i].id === courseId) {
+          if (courseId === "all") {
+            user.course[i].remind = selectedTime;
+          } else if (user.course[i].id === courseId) {
             user.course[i].remind = selectedTime;
           }
         }

@@ -1,9 +1,7 @@
 import React from "react";
 
-import RemindTimeList from "./RemindTimeList";
 
-
-export default function Open({user, courseId, selected, onClick = f => f}) {
+export default function Open({selected, onClick = f => f}) {
   return (
     <>
       <button 
@@ -11,7 +9,6 @@ export default function Open({user, courseId, selected, onClick = f => f}) {
         onClick={onClick}>
           是否通知
       </button>
-      {selected ? <RemindTimeList user={user} courseId={courseId} /> : null}
     </>
   );
 }
