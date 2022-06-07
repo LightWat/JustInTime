@@ -1,12 +1,14 @@
 import React, {createContext, useContext, useState} from "react";
 
 import usersData from "../data/usersData.json";
+import coursesData from "../data/coursesData.json";
 
 
 const NoticeContext = createContext();
 
 export function NoticeProvider({children}) {
   const [users, setUsers] = useState(usersData);
+  const [courses, setCourses] = useState(coursesData);
 
   const updateNoticeTeacher = (userId, courseId) => {
     const updatedUsers = [...users];
@@ -79,7 +81,23 @@ export function NoticeProvider({children}) {
         }
       }
     }
-  }
+
+    setUsers(updatedUsers);
+  };
+
+  const updateLink = (courseId, newLink) => {
+    const updatedCourses = [...courses];
+
+    for (let course of updatedCourses) {
+      if (courseId === "all") {
+        course.link = newLink;
+      } else if (course.id === courseId) {
+        course.link = newLink;
+      }
+    }
+
+    setCourses(updatedCourses);
+  };
 
   return (
     <NoticeContext.Provider value={{
@@ -87,7 +105,8 @@ export function NoticeProvider({children}) {
       updateNoticeTeacher,
       updateNoticeTime,
       updateNoticeOpen,
-      updateRemindTime
+      updateRemindTime,
+      updateLink
     }}>
       {children}
     </NoticeContext.Provider>

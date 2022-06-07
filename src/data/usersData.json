@@ -2,6 +2,7 @@
   {
     "id": "111001001",
     "name": "Dennis",
+    "identity": "student",
     "course": [
       {
         "id": "all",
@@ -26,6 +27,21 @@
         "showTeacher": true,
         "showTime": false,
         "remind": 10
+      }
+    ]
+  },
+  {
+    "id": "iamteacher",
+    "name": "Augustin",
+    "identity": "teacher",
+    "course": [
+      {
+        "id": "all",
+        "name": "所有課程"
+      },
+      {
+        "id": "001",
+        "name": "Web程式設計"
       }
     ]
   }

@@ -8,7 +8,7 @@ import Status from "./Status";
 import RemindTimeList from "./RemindTimeList";
 
 
-export default function SelectCourse({userId}) {
+export default function StudentSelectCourse({userId}) {
   const {
     users,
     updateNoticeTeacher,
@@ -16,7 +16,7 @@ export default function SelectCourse({userId}) {
     updateNoticeOpen,
   } = useNotices();
 
-  const [selected, setSelected] = useState("001");
+  const [selected, setSelected] = useState("all");
   
   const user = users.find(user => user.id === userId);
   const course = user.course.find(course => course.id === selected);
@@ -59,7 +59,7 @@ export default function SelectCourse({userId}) {
           user={user} 
           courseId={course.id}
           changeSelect={setSelectedTime}
-        /> : 
+        /> :
         null
       }
       <hr />
