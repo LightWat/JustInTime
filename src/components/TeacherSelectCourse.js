@@ -6,16 +6,16 @@ import {useNotices} from "../context/notice-hooks";
 export default function TeacherSelectCourse({userId}) {
   const {users, updateLink} = useNotices();
   const [selected, setSelected] = useState("all");
-  const addedLink = useRef();
+  const replacedLink = useRef();
 
   const user = users.find(user => user.id === userId);
   const course = user.course.find(course => course.id === selected);
 
   const submit = event => {
     event.preventDefault();
-    const newLink = addedLink.current.value;
+    const newLink = replacedLink.current.value;
     updateLink(course.id, newLink);
-    addedLink.current.value = "";
+    replacedLink.current.value = "";
   }
 
   return (
@@ -28,7 +28,7 @@ export default function TeacherSelectCourse({userId}) {
         ))}
       </select>
       <form onSubmit={submit}>
-        <input ref={addedLink} type="text" placeholder="填入新連結" required />
+        <input ref={replacedLink} type="text" placeholder="填入新連結" required />
         <button>送出</button>
       </form>
     </>

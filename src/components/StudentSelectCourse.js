@@ -58,6 +58,7 @@ export default function StudentSelectCourse({userId}) {
         <RemindTimeList 
           user={user} 
           courseId={course.id}
+          defaultValue={selectedTime}
           changeSelect={setSelectedTime}
         /> :
         null

@@ -3,7 +3,12 @@ import React from "react";
 import {useNotices} from "../context/notice-hooks";
 
 
-export default function RemindTimeList({user, courseId, changeSelect = f => f}) {
+export default function RemindTimeList({
+  user, 
+  courseId,
+  defaultValue,
+  changeSelect = f => f,
+}) {
   const {updateRemindTime} = useNotices();
 
   const range = [0, 5, 10, 15, 20];
