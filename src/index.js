@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {NoticeProvider} from "./context/notice-hooks";
-
-import App from "./components/App";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./components/App"
 
 
 ReactDOM.render(

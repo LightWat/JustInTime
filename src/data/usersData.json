@@ -3,6 +3,7 @@
     "id": "111001001",
     "name": "Dennis",
     "identity": "student",
+    "password": "1234",
     "course": [
       {
         "id": "all",
@@ -34,6 +35,7 @@
     "id": "iamteacher",
     "name": "Augustin",
     "identity": "teacher",
+    "password": "5678",
     "course": [
       {
         "id": "all",
