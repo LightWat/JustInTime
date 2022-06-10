@@ -1,0 +1,9 @@
+.button{
+position: absolute;
+width: 117px;
+height: 123px;
+left: 333px;
+top: 256px;
+background-image: url('../UI/上課時間.png');
+background-color: white;
+}
