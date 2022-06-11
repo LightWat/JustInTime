@@ -1,14 +1,18 @@
 import React, {useRef} from "react";
 import {useState} from "react";
-import userData from "../data/users.json"
+import {useNavigate} from "react-router-dom";
+//import { Link } from "react-router-dom";
+import userData from "../data/usersData.json"
 
 
 export default function Login(){
   const LoginUser = useRef();
   const LoginPas = useRef();
   const [Names,setNames] = useState(userData);
+  let navigate = useNavigate();
 
   const Submit = e => {
+    
       e.preventDefault();
       const InputName = LoginUser.current.value;
       const InputPas = LoginPas.current.value;
@@ -24,16 +28,17 @@ export default function Login(){
       if(loginSeccess){
         LoginUser.current.value='';
         LoginPas.current.value='';
+    
+        // if(loginIdentity === "student")
+        // {
+        //   alert("student");
+        // }else if(loginIdentity === "teacher")
+        // {
+        //   alert("teacher");
+        // }
 
-        /*
-        if(loginIdentity === "student")
-        {
-          alert("student");
-        }else if(loginIdentity === "teacher")
-        {
-          alert("teacher");
-        }
-        */
+        navigate('/course',{ state: { id: loginID } });
+        console.log(loginID)
       }else{
         alert("帳號或密碼錯誤");
       }
@@ -49,7 +54,6 @@ export default function Login(){
           <label><b>Password : </b></label>
           <input ref={LoginPas} type="password" placeholder="Enter Password" name="psw" required></input>
         </div>
-          
         <button type="submit">Login</button>
       </form>
     );

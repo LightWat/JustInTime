@@ -1,9 +1,20 @@
 import React from "react";
-import AdjustmentArea from "./AdjustmentArea";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "../pages/LoginPage";
+import Course from "../pages/Course";
+import Oops from "../pages/Oops";
 
-
-export default function App({userId}) {
+export default function App() {
   return (
-    <AdjustmentArea userId={userId} />
+   <>
+   <div>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/course" element={<Course />} />
+        <Route path="*" element={<Oops />} />
+      </Routes>
+
+    </div>
+    </>
   );
 }
