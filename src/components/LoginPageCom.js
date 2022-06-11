@@ -1,5 +1,4 @@
 import React, {useRef} from "react";
-import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 //import { Link } from "react-router-dom";
 import userData from "../data/usersData.json"
@@ -8,7 +7,7 @@ import userData from "../data/usersData.json"
 export default function Login(){
   const LoginUser = useRef();
   const LoginPas = useRef();
-  const [Names,setNames] = useState(userData);
+  
   let navigate = useNavigate();
 
   const Submit = e => {
@@ -19,9 +18,9 @@ export default function Login(){
       let loginSeccess = false;
       //let loginIdentity;
       let loginID;
-      Names.forEach((myname)=>{
+      userData.forEach((myname)=>{
         if(loginSeccess) return;
-        loginSeccess = InputName === myname.name && InputPas === myname.password;
+        loginSeccess = InputName === myname.id && InputPas === myname.password;
         //if(loginSeccess) loginIdentity = myname.identity;
         if(loginSeccess) loginID = myname.id;
       })
@@ -48,7 +47,7 @@ export default function Login(){
       <form onSubmit={Submit}>
         <div>
           <label><b>Username : </b></label>
-          <input ref={LoginUser} type="text" placeholder="Enter Username" name="uname" required></input>
+          <input ref={LoginUser} type="text" placeholder="Enter UserID" name="uname" required></input>
         </div>
         <div>
           <label><b>Password : </b></label>

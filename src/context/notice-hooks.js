@@ -25,7 +25,7 @@ export function NoticeProvider({children}) {
         }
       }
     }
-
+    
     setUsers(updatedUsers);
   };
 

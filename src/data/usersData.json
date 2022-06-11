@@ -25,7 +25,7 @@
         "id": "002",
         "name": "演算法",
         "open": true,
-        "showTeacher": true,
+        "showTeacher": false,
         "showTime": false,
         "remind": 10
       }

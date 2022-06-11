@@ -6,6 +6,7 @@ import Time from "./Time";
 import Open from "./Open";
 import Status from "./Status";
 import RemindTimeList from "./RemindTimeList";
+import Alert from "./Alert";
 
 
 export default function StudentSelectCourse({userId}) {
@@ -16,7 +17,7 @@ export default function StudentSelectCourse({userId}) {
     updateNoticeOpen,
   } = useNotices();
 
-  const [selected, setSelected] = useState("all");
+  const [selected, setSelected] = useState("001");
   
   const user = users.find(user => user.id === userId);
   const course = user.course.find(course => course.id === selected);
@@ -65,6 +66,13 @@ export default function StudentSelectCourse({userId}) {
       }
       <hr />
       <Status course={course} />
+      
+      {user.course.map((course, i) => (
+        (course.open && course.id !== "all") ?
+          <Alert course={course} /> :
+          null
+      ))}
     </>
+
   );
 }

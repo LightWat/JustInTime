@@ -1,39 +1,39 @@
-import Popup from './components/Popup';
-import {useState ,useEffect} from 'react';
+import Popup from './Popup';
+import React, {useState ,useEffect} from 'react';
+import {countTime} from "../utils/countTime";
+import coursesData from "../data/coursesData.json";
 
-function App() {
-  const [buttonPopup, setButtonPopup]= useState(false);
+
+function Alert({course}) {
   const [timedPopup, setTimedPopup]= useState(false);
+  
+  const remind = countTime(course);
 
   useEffect(()=>{
-    setTimeout(()=>{
-      setTimedPopup(true);
-    }, 3000);
-  },[]);
+    if (remind > 0) {
+      setTimeout(()=>{
+        setTimedPopup(true);
+      }, remind);
+    }
+  },[remind]);
+
+  const courseData = coursesData.find(coursesData => 
+    coursesData.id === course.id);
 
   return (
-    <div className="App">
-      <main>
-        <h1>課程提醒</h1>
-        <button onClick={() => setButtonPopup(true)}>確定通知</button>
-      </main>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>課程提醒通知</h3>
-          <p>web程式設計</p>
-          <p>教師：盧建成</p>
-          <p>上課時間：13:00~16:00(一)</p>
-          <p>上課連結：點這裡!</p>          
-      </Popup>
-  
-      <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
+    <>
+      <div className="Alert">
+        <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
           <h3>上課提醒</h3>
-          <p>web程式設計</p>
-          <p>教師：盧建成</p>
-          <p>十分鐘後上課</p>
-          <p>上課連結：點這裡!</p>          
-      </Popup>
-    </div>
+          <p>{courseData.name}</p>
+          {course.showTeacher ? <p>教師: {courseData.teacher}</p> : null}
+          {course.showTime ? <p>上課時間: {courseData.time}</p> : null }
+          <p>{course.remind} 分鐘後上課</p>
+          <p>上課連結：<a href={courseData.link}>點這裡!</a></p>          
+        </Popup>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default Alert;
