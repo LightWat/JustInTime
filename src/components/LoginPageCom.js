@@ -45,15 +45,18 @@ export default function Login(){
 
     return(
       <form onSubmit={Submit}>
+        <div className="login-background"></div>
+        <div className="login-title"></div>
         <div>
-          <label><b>Username : </b></label>
-          <input ref={LoginUser} type="text" placeholder="Enter UserID" name="uname" required></input>
+          <label className="user-name"><b>Username : </b></label>
+          <input className ="input-name" ref={LoginUser} type="text" placeholder="Enter UserID" name="uname" required></input>
         </div>
         <div>
-          <label><b>Password : </b></label>
-          <input ref={LoginPas} type="password" placeholder="Enter Password" name="psw" required></input>
+          <label className="password"><b>Password : </b></label>
+          <input className ="input-password" ref={LoginPas} type="password" placeholder="Enter Password" name="psw" required></input>
         </div>
-        <button type="submit">Login</button>
+        <button className ="button-login" type="submit"></button>
+        <div className="people-login"></div>
       </form>
     );
 }

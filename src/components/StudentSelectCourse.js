@@ -7,6 +7,7 @@ import Open from "./Open";
 import Status from "./Status";
 import RemindTimeList from "./RemindTimeList";
 import Alert from "./Alert";
+import image2 from "../UI/課表.png";
 
 
 export default function StudentSelectCourse({userId}) {
@@ -26,9 +27,18 @@ export default function StudentSelectCourse({userId}) {
 
   return (
     <>
-      <select className = "select-course" defaultValue={selected} onChange={event => 
-        setSelected(event.target.value)
-      }>
+      <div className = "class-table">
+        <img src={image2} alt="image2" />
+      </div>
+
+      <div className = "adjust-area"></div>
+
+      <select className = "select-course" 
+        defaultValue={selected} 
+        onChange={event =>
+          setSelected(event.target.value)
+        }
+      >
         {user.course.map((course, i) => (
           <option value={course.id}>{course.name}</option>
         ))}

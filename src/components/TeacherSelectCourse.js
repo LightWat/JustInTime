@@ -20,9 +20,13 @@ export default function TeacherSelectCourse({userId}) {
 
   return (
     <>
-      <select defaultValue={selected} onChange={event => 
-        setSelected(event.target.value)
-      }>
+      <select 
+        className = "select-course"
+        defaultValue={selected} 
+        onChange={event => 
+          setSelected(event.target.value)
+        }
+      >
         {user.course.map((course, i) => (
           <option value={course.id}>{course.name}</option>
         ))}
