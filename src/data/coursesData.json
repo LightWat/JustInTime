@@ -8,9 +8,30 @@
   },
   {
     "id": "002",
-    "name": "演算法",
-    "teacher": "沈錳坤",
-    "time": "FRI 09:00 ~ 12:00",
+    "name": "統計學",
+    "teacher": "周佩婷",
+    "time": "TUE 13:00 ~ 16:00",
+    "link": "https://app.gather.town/invite?token=irA0_LglmrN3zcOlMVbfRxBYt3MoWuL6"
+  },
+  {
+    "id": "003",
+    "name": "行政法",
+    "teacher": "莊國榮",
+    "time": "WED 10:00 ~ 12:00",
+    "link": "https://app.gather.town/invite?token=irA0_LglmrN3zcOlMVbfRxBYt3MoWuL6"
+  },
+  {
+    "id": "004",
+    "name": "JS程式設計",
+    "teacher": "廖峻峰",
+    "time": "THU 09:00 ~ 12:00",
+    "link": "https://app.gather.town/invite?token=irA0_LglmrN3zcOlMVbfRxBYt3MoWuL6"
+  },
+  {
+    "id": "005",
+    "name": "人機互動設計",
+    "teacher": "陳宜秀",
+    "time": "FRI 16:00 ~ 19:00",
     "link": "https://meet.google.com/gdc-frjp-ogx"
   }
 ]

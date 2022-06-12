@@ -476,3 +476,16 @@
     font-weight: 400;
     font-size: 40px;
 }
+
+.confirm{
+    background-image: url('../UI/課程內容提醒調整區/確認鍵.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 393px;
+    height: 81px;
+    left: 172px;
+    top: 1190px;
+    z-index:800;
+}

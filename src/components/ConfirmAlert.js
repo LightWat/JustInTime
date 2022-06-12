@@ -2,6 +2,8 @@ import React, {useState} from "react";
 
 import coursesData from "../data/coursesData.json";
 import Popup from "./Popup";
+import '../CSS/Popup.css'
+
 
 
 export default function ConfirmAlert({course}) {
@@ -19,25 +21,32 @@ export default function ConfirmAlert({course}) {
 
   return (
     <>
-      <button onClick={confirmAlert}>確定通知</button>
+      <button className = "confirm" onClick={confirmAlert}></button>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>上課提醒</h3>
-          <p>{course.name}</p>
-          {course.showTeacher ? <p>教師 : 
-            {isAll ?
-              "【教師名稱】" : 
-              courseData.teacher}</p> : 
-            null}
-          {course.showTime ? <p>上課時間: 
-            {isAll ?
-              "【上課時間】": 
-              courseData.time}</p> : 
-            null}
-          <p>{course.remind} 分鐘後上課</p>
-          <p>上課連結：{isAll ?
-            "【上課連結】":
-            <a href={courseData.link}>點這裡!</a>}
-          </p>          
+
+        <div className = "lighter-color"></div>
+
+
+
+        <p className = "popup-course">上課提醒-{course.name}</p>
+        {course.showTeacher ? <p className = "popup-teacher">教師 : 
+          {isAll ?
+            "【教師名稱】" : 
+            courseData.teacher}</p> : 
+          null
+        }
+        {course.showTime ? <p className = "popup-time">上課時間: 
+          {isAll ?
+            "【上課時間】": 
+            courseData.time}</p> : 
+          null
+        }
+          
+        <p className = "popup-link">上課連結：{isAll ?
+          "【上課連結】":
+          <a href={courseData.link}>點這裡!</a>}
+        </p>
+        <p className = "popup-minuate">將在 {course.remind} 分鐘後進行課程</p>          
       </Popup>
     </>
   );

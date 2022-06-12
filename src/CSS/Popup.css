@@ -1,26 +1,94 @@
-.popup{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height:100%;
-    background-color:aliceblue;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
 
 .popup-inner{
-    position:relative;
-    padding: 32px;
-    width:30%;
-    max-width:640px;
-    background-color: rgb(255, 216, 216);
+    position:absolute;
+    top:300px;
+    left: 610px;
+    width: 725px;
+    height: 475px;
+    background-color: rgb(255, 177, 177);
+    z-index:1000;
+    border-radius: 41px;
+}
+
+.lighter-color{
+    background-color: rgb(245, 238, 238);
+    position:absolute;
+    width: 559px;
+    height: 274px;
+    border-radius: 20px;
+    top:104px;
+    left: 83px;
+    z-index:100;
 }
 
 .popup-inner .close-btn{
+    background-image: url('../UI/不顯示.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
     position: absolute;
-    top:16px;
-    right:16px;
+    width: 51.97px;
+    height: 51.97px;
+    top:20px;
+    right:20px;
+    z-index:1000
+}
+
+.popup-course{
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width:725px;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 0px;
+    text-align: center;
+    z-index:200;
+}
+
+.popup-teacher{
+    position: absolute;
+    left: 124px;
+    top:134px;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 46px;
+    z-index:200;    
+}
+
+.popup-time{
+    position: absolute;
+    left: 124px;
+    top:184px;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 46px;
+    z-index:200;   
+}
+
+.popup-link{
+    position: absolute;
+    left: 124px;
+    top:234px;
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 46px;
+    z-index:200;   
+}
+
+.popup-minuate{
+    position: absolute;
+    left: 0px;
+    top:400px;
+    z-index:200;
+    width:725px;
+    font-family: 'Noto Sans TC';
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
 }

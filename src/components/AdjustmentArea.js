@@ -3,7 +3,7 @@ import React from "react";
 import StudentSelectCourse from "./StudentSelectCourse";
 import TeacherSelectCourse from "./TeacherSelectCourse";
 import usersData from "../data/usersData.json";
-import css from "../CSS/All.css";
+import "../CSS/All.css";
 
 
 
