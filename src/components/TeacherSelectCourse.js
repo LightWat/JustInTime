@@ -20,6 +20,10 @@ export default function TeacherSelectCourse({userId}) {
 
   return (
     <>
+      <div className = "class-table-teacher"></div>
+
+      <div className = "adjust-area-teacher"></div>      
+
       <select 
         className = "select-course"
         defaultValue={selected} 

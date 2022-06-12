@@ -22,8 +22,7 @@ export default function Status({course}) {
         <div>
           <a href={courseData.link} >
             <button className = "show-link"></button>
-          </a>
-          
+          </a>          
         </div>
         {course.showTime ? 
           <div className = "show-time">

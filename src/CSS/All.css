@@ -103,6 +103,32 @@
     z-index:200;
 }
 
+.class-table-teacher{
+    position: absolute;
+    background-color: rgb(233, 234, 251);
+    background-image: url('../UI/課表顯示區/課表origin.png');
+    background-size:100% 100%;
+    width: 1133px;
+    height: 1011px;
+    left: 732px;
+    top: 304px;
+    border-radius: 1px;
+    background-color: rgb(233, 234, 251);
+    z-index:800
+}
+
+.adjust-area-teacher{
+    position: absolute;
+    background-color: rgb(233, 234, 251);
+    background-image: url('../UI/調整-老師.png');
+    background-size:595px 980px;
+    width: 595px;
+    height: 980px;
+    left: 70px;
+    top: 304px;
+    z-index:200;
+}
+
 .people{
     background-color: rgba(233, 234, 251, 0);
     background-image: url('../UI/給使用者的訊息.png');
@@ -338,4 +364,65 @@
     left: 726px;
     top: 184px;
 
+}
+
+.button-link1{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 45.1px;
+    height: 45.89px;
+    left: 953.58px;
+    top: 847px;
+    z-index:800;
+}
+.button-link2{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 44.44px;
+    height: 44.72px;
+    left: 1157.44px;
+    top: 842.63px;
+    z-index:800;
+}
+.button-link3{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 45.1px;
+    height: 45.89px;
+    left: 1366px;
+    top: 585px;
+    z-index:800;
+}
+.button-link4{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 44.44px;
+    height: 44.72px;
+    left: 1568.44px;
+    top: 578.63px;
+    z-index:800;
+}
+.button-link5{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 44.44px;
+    height: 44.49px;
+    left: 1568.44px;
+    top: 1039.96px;
+    z-index:800;
 }

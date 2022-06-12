@@ -34,6 +34,23 @@ export default function StudentSelectCourse({userId}) {
 
       <div className = "adjust-area"></div>
 
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link1"></button>
+      </a>          
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link2"></button>
+      </a>  
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link3"></button>
+      </a>  
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link4"></button>
+      </a>  
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link5"></button>
+      </a>  
+ 
+
       <select className = "select-course" 
         defaultValue={selected} 
         onChange={event =>
