@@ -22,7 +22,13 @@ export default function TeacherSelectCourse({userId}) {
     <>
       <div className = "class-table-teacher"></div>
 
-      <div className = "adjust-area-teacher"></div>      
+      <div className = "adjust-area-teacher"></div>   
+
+      <div className = "web-teacher"></div>    
+
+      <a href="https://meet.google.com/gdc-frjp-ogx" >
+        <button className = "button-link6"></button>
+      </a>  
 
       <select 
         className = "select-course"
@@ -36,8 +42,8 @@ export default function TeacherSelectCourse({userId}) {
         ))}
       </select>
       <form onSubmit={submit}>
-        <input ref={replacedLink} type="text" placeholder="填入新連結" required />
-        <button>送出</button>
+        <input className = "input-link" ref={replacedLink} type="text" placeholder="填入新連結" required />
+        <button className = "button-submit"></button>
       </form>
     </>
   );

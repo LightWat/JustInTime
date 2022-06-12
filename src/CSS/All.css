@@ -426,3 +426,53 @@
     top: 1039.96px;
     z-index:800;
 }
+.button-link6{
+    background-image: url('../UI/上課連結.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 45.1px;
+    height: 47px;
+    left: 953.58px;
+    top: 876.5px;
+    z-index:800;
+}
+
+.web-teacher{
+    background-image: url('../UI/課表顯示區/Web設計.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 203px;
+    height: 202px;
+    left: 807px;
+    top: 735px;
+    z-index:800;
+}
+.button-submit{
+    background-image: url('../UI/送出.png');
+    background-size:100% 100%;
+    background-color: rgb(253, 250, 250,0);
+    border-width: 0cm;
+    position: absolute;
+    width: 393px;
+    height: 81px;
+    left: 172px;
+    top:900px;
+    z-index:800;
+
+}
+.input-link{
+    position: absolute;
+    width: 393px;
+    height: 70px;
+    left: 172px;
+    top:665px;
+    z-index:800;
+    font-family: 'Jua';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
