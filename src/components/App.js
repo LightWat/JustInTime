@@ -7,12 +7,13 @@ import Oops from "../pages/Oops";
 export default function App() {
   return (
    <>
-   <div>
+   <div className = "app-header">
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/course" element={<Course />} />
         <Route path="*" element={<Oops />} />
       </Routes>
+
 
     </div>
     </>

@@ -26,7 +26,7 @@ export default function StudentSelectCourse({userId}) {
 
   return (
     <>
-      <select defaultValue={selected} onChange={event => 
+      <select className = "select-course" defaultValue={selected} onChange={event => 
         setSelected(event.target.value)
       }>
         {user.course.map((course, i) => (
@@ -34,8 +34,7 @@ export default function StudentSelectCourse({userId}) {
         ))}
       </select>
 
-      <br />
-      <br />
+
 
       <Teacher 
         selected={course.showTeacher}
@@ -64,7 +63,6 @@ export default function StudentSelectCourse({userId}) {
         /> :
         null
       }
-      <hr />
       <Status course={course} />
       
       {user.course.map((course, i) => (

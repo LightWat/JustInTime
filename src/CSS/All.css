@@ -1,0 +1,215 @@
+.button-time-true{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 397px;
+    top: 558px;
+    background-image: url('../UI/課程內容提醒調整區/上課時間.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+
+.button-time-false{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 397px;
+    top: 558px;
+    background-image: url('../UI/課程內容提醒調整區/上課時間hover.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+.button-teacher-true{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 217px;
+    top: 558px;    
+    background-image: url('../UI/課程內容提醒調整區/教授圖.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+
+.button-teacher-false{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 217px;
+    top: 558px;    
+    background-image: url('../UI/課程內容提醒調整區/教授圖hover.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+
+.button-alart-true{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 217px;
+    top: 732px;    
+    background-image: url('../UI/課程內容提醒調整區/時間下拉選單集purple/提醒時間.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+.button-alart-false{
+    position: absolute;
+    width: 117px;
+    height: 120px;
+    left: 217px;
+    top: 732px;    
+    background-image: url('../UI/課程內容提醒調整區/時間下拉選單集purple/提醒時間hover.png');
+    background-size:117px 120px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    z-index:800
+}
+
+.class-table{
+    position: absolute;
+    width: 1133px;
+    height: 1011px;
+    left: 732px;
+    top: 263px;
+    border-radius: 1px;
+    background-color: rgb(233, 234, 251);
+    z-index:800
+}
+
+.adjust-area{
+    position: absolute;
+    background-color: rgb(233, 234, 251);
+    background-image: url('../UI/課程內容提醒調整區/內容調整區背景.png');
+    background-size:595px 980px;
+    width: 595px;
+    height: 980px;
+    left: 70px;
+    top: 304px;
+    z-index:200;
+}
+
+.people{
+    background-color: rgba(233, 234, 251, 0);
+    background-image: url('../UI/給使用者的訊息.png');
+    background-size:100% 100%;
+    position: absolute;
+    width: 908px;
+    height: 287.87px;
+    left: 587px;
+    top: 1.69px;
+}
+
+.app-header{
+    background-color: rgb(233, 234, 251);
+    color: rgb(0, 0, 0);
+    width: 1920px;
+    height: 1350px;
+    z-index:999;
+    position: absolute;
+}
+
+.alart-time{
+    position: absolute;
+    width: 600px;
+    height: 65px;
+    left: 69px;
+    top: 880px;
+    font-size: 36px;
+    line-height: 34px;
+    display: flex;
+    letter-spacing: 0em;
+    z-index:800
+}
+
+.show-link{
+    background-color: rgba(233, 234, 251, 0);
+    border-color: rgb(255, 255, 255);
+    background-image: url('../UI/課程內容提醒調整區/訊息框時間gray/訊息框-上課連結.png');
+    background-size:100% 100%;
+    position: absolute;
+    width: 178px;
+    height: 53px;
+    left: 250px;
+    top: 990px;
+    z-index:800;
+}
+
+.show-teacher{
+    background-color: rgba(233, 234, 251, 0);
+    border-color: rgb(255, 255, 255);
+    background-image: url('../UI/課程內容提醒調整區/訊息框時間gray/訊息框-教授姓名.png');
+    background-size:100% 100%;
+    position: absolute;
+    width: 178px;
+    height: 53px;
+    left: 250px;
+    top: 1120px;
+    z-index:800;
+}
+
+.show-time{
+    background-color: rgba(233, 234, 251, 0);
+    border-color: rgb(255, 255, 255);
+    background-image: url('../UI/課程內容提醒調整區/訊息框時間gray/訊息框-上課時間.png');
+    background-size:100% 100%;
+    position: absolute;
+    width: 178px;
+    height: 53px;
+    left: 250px;
+    top: 1055px;
+    z-index:800;
+}
+
+.detail-time{
+    position: absolute;
+    width: 220px;
+    height: 26px;
+    left: 195px;
+    top: -28px;
+    font-size: 25px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    z-index:800
+}
+
+.detail-teacher{
+    position: absolute;
+    width: 220px;
+    height: 26px;
+    left: 195px;
+    top: -28px;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    z-index:800
+}
+
+.select-course{
+    position: absolute;
+    width: 393px;
+    height: 81px;
+    left: 172px;
+    top: 450px;
+    z-index:800
+}
+
+.select-time{
+    background-image: url('../UI/課程內容提醒調整區/時間下拉選單集purple/鈴鐺hover-5.png');
+    background-size:100% 100%;
+    position: absolute;
+    width: 113px;
+    height: 41px;
+    left: 400px;
+    top: 738px;
+    z-index:800
+
+}

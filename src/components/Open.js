@@ -2,13 +2,22 @@ import React from "react";
 
 
 export default function Open({selected, onClick = f => f}) {
-  return (
-    <>
+  if(selected){
+    return (
+        
       <button 
-        style={selected ? {"backgroundColor": "green"} : {"backgroundColor": "red"}}
+        className = "button-alart-true"
         onClick={onClick}>
-          是否通知
+          
       </button>
-    </>
-  );
+    )
+  }else{
+    return (
+        <button 
+          className = "button-alart-false"
+          onClick={onClick}>
+          
+        </button>
+    )
+  };
 }

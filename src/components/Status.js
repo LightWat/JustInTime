@@ -1,7 +1,5 @@
 import React from "react";
-
 import coursesData from "../data/coursesData.json";
-
 
 export default function Status({course}) {
   let courseData;
@@ -14,27 +12,27 @@ export default function Status({course}) {
 
   if (course.id !== "all") {
     return (
-      <div>
-        <h4>
+      <div >
+        <h5 className = "alart-time">
           {course.open ? 
             `【${course.name}】 ${course.remind}分鐘前提醒通知` :
             `【${course.name}】 未開啟通知`
           }
-        </h4>
+        </h5>
         <div>
-          <h4>上課連結</h4>
-          <a href={courseData.link}>連結</a>
+          <a href={courseData.link} >
+            <button className = "show-link"></button>
+          </a>
+          
         </div>
         {course.showTime ? 
-          <div>
-            <h4>上課時間</h4>
-            <h5>{courseData.time}</h5>
+          <div className = "show-time">
+            <h5 className = "detail-time">{courseData.time}</h5>
           </div>: 
         null}
         {course.showTeacher ? 
-          <div>
-            <h4>教授姓名</h4>
-            <h5>{courseData.teacher}</h5>
+          <div className = "show-teacher">
+            <h5 className = "detail-teacher">{courseData.teacher}</h5>
           </div> : 
         null}
       </div>
@@ -42,24 +40,18 @@ export default function Status({course}) {
   } else {
     return (
       <div>
-        <h4>
+        <h5 className = "alart-time">
           {course.open ? 
             `【${course.name}】 ${course.remind}分鐘前提醒通知` :
             `【${course.name}】 未開啟通知`
           }
-        </h4>
-        <div>
-          <h4>上課連結</h4>
-        </div>
+        </h5>
+        <div className = "show-link"></div>
         {course.showTime ? 
-          <div>
-            <h4>上課時間</h4>
-          </div>: 
+          <div className = "show-time"></div>: 
         null}
         {course.showTeacher ? 
-          <div>
-            <h4>教授姓名</h4>
-          </div> : 
+          <div className = "show-teacher"></div> : 
         null}
       </div>
     );

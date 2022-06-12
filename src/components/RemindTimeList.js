@@ -14,7 +14,8 @@ export default function RemindTimeList({
   const range = [0, 5, 10, 15, 20];
 
   return (
-    <select 
+    <select
+      className = "select-time" 
       defaultValue={"選擇提前幾分鐘通知"} 
       onChange={event => {
         updateRemindTime(user.id, courseId, event.target.value);
