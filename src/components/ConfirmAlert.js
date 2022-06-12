@@ -11,10 +11,15 @@ export default function ConfirmAlert({course}) {
     coursesData.id === course.id);
 
   const isAll = course.id === "all";
+  
+  const confirmAlert = event => {
+    event.preventDefault();
+    setButtonPopup(true);
+  }
 
   return (
     <>
-      <button onClick={() => setButtonPopup(true)}>確定通知</button>
+      <button onClick={confirmAlert}>確定通知</button>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <h3>上課提醒</h3>
           <p>{course.name}</p>
