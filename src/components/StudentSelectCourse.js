@@ -8,6 +8,7 @@ import Status from "./Status";
 import RemindTimeList from "./RemindTimeList";
 import Alert from "./Alert";
 import image2 from "../UI/課表.png";
+import ConfirmAlert from "./ConfirmAlert";
 
 
 export default function StudentSelectCourse({userId}) {
@@ -74,6 +75,7 @@ export default function StudentSelectCourse({userId}) {
         null
       }
       <Status course={course} />
+      <ConfirmAlert course={course} />
       
       {user.course.map((course, i) => (
         (course.open && course.id !== "all") ?
