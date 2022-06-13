@@ -2,7 +2,7 @@ import React from "react";
 import {render, screen} from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 
-import TeacherSelectCourse from "../components/TeacherSelectCourse";
+import TeacherSelectCourse from "./TeacherSelectCourse";
 import {NoticeProvider} from "../context/notice-hooks";
 
 

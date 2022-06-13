@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Open from "../components/Open";
+import Open from "./Open";
 import '@testing-library/jest-dom/extend-expect'
 
 
