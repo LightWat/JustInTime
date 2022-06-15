@@ -7,7 +7,9 @@ export default function Open({selected, onClick = f => f}) {
         
       <button 
         className = "button-alart-true"
-        onClick={onClick}>
+        onClick={onClick}
+        data-testid="open"  
+      >
           
       </button>
     )
@@ -15,7 +17,9 @@ export default function Open({selected, onClick = f => f}) {
     return (
         <button 
           className = "button-alart-false"
-          onClick={onClick}>
+          onClick={onClick}
+          data-testid="open"
+        >
           
         </button>
     )
