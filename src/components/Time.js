@@ -10,7 +10,9 @@ export default function Time({selected, onClick = f => f}) {
         
         <button 
           className = "button-time-true"
-          onClick={onClick}>
+          onClick={onClick}
+          data-testid="time"
+        >
           
         </button>
       )
@@ -18,7 +20,9 @@ export default function Time({selected, onClick = f => f}) {
     return (
         <button 
           className = "button-time-false"
-          onClick={onClick}>
+          onClick={onClick}
+          data-testid="time"
+        >
           
         </button>
     )

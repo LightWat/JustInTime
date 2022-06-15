@@ -21,10 +21,13 @@ export default function ConfirmAlert({course}) {
 
   return (
     <>
-      <button className = "confirm" onClick={confirmAlert}></button>
+      <button 
+        className = "confirm" 
+        onClick={confirmAlert} 
+        data-testid="confirm"></button>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
 
-        <div className = "lighter-color"></div>
+        <div className = "lighter-color" data-testid="popup"></div>
 
 
 

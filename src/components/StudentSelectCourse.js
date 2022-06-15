@@ -19,7 +19,7 @@ export default function StudentSelectCourse({userId}) {
     updateNoticeOpen,
   } = useNotices();
 
-  const [selected, setSelected] = useState("001");
+  const [selected, setSelected] = useState("all");
   
   const user = users.find(user => user.id === userId);
   const course = user.course.find(course => course.id === selected);

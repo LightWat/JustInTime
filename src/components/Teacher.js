@@ -7,7 +7,9 @@ export default function Teacher({selected, onClick = f => f}) {
       
       <button 
         className = "button-teacher-true"
-        onClick={onClick}>
+        onClick={onClick}
+        data-testid="teacher"
+      >
         
       </button>
     )

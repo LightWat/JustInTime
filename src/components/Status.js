@@ -39,7 +39,7 @@ export default function Status({course}) {
   } else {
     return (
       <div>
-        <h5 className = "alart-time">
+        <h5 className = "alart-time" data-testid="status-time">
           {course.open ? 
             `【${course.name}】 ${course.remind}分鐘前提醒通知` :
             `【${course.name}】 未開啟通知`
